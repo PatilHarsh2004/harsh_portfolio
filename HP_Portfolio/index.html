@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshvardhan Patil | Developer Portfolio</title>
+  <meta name="description" content="Interactive developer portfolio of Harshvardhan Patil - MCA student and Java-focused developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@800;900&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bootScreen" class="boot-screen">
+    <div class="boot-box">
+      <div class="boot-logo brand-script">Harsh Patil <b>&lt;/&gt;</b></div>
+      <p id="bootText">INITIALIZING HARSH.OS...</p>
+      <div class="boot-progress"><span id="bootProgress"></span></div>
+      <button id="enterBtn" class="neon-btn hidden">ENTER PORTFOLIO</button>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a href="#home" class="brand brand-script">
+      Harsh Patil <b>&lt;/&gt;</b>
+      <div class="brand-line"></div>
+    </a>
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#journey">JOURNEY</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"></button>
+  </header>
+
+  <main>
+    <section id="home" class="home-hero">
+      <div class="home-copy">
+        <p class="home-kicker">MCA STUDENT <span>•</span> JAVA DEVELOPER <span>•</span> BUILDER</p>
+        <h1 class="main-title">
+          <span class="first-name">HARSHVARDHAN</span>
+          <span class="last-name">PATIL</span>
+        </h1>
+        <div class="home-underline">
+          <span class="bar-lime"></span>
+          <span class="bar-gray"></span>
+        </div>
+        <p class="home-intro">
+          I build practical web applications with Java, SQL and modern web<br class="desktop-only">
+          technologies — while exploring the next generation of software<br class="desktop-only">
+          and AI.
+        </p>
+        
+        <div class="hero-actions home-actions">
+          <a href="#projects" class="neon-btn">
+            <svg class="btn-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/>
+            </svg>
+            EXPLORE MY WORK &nbsp;→
+          </a>
+          <a href="#contact" class="ghost-btn">
+            LET’S CONNECT &nbsp;
+            <svg class="btn-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contact-timeline-container">
+          <div class="timeline-spine">
+            <span class="spine-dot"></span>
+            <span class="spine-line"></span>
+            <span class="spine-dot"></span>
+            <span class="spine-line"></span>
+            <span class="spine-dot"></span>
+            <span class="spine-line"></span>
+            <span class="spine-dot"></span>
+          </div>
+
+          <div class="timeline-items">
+            <a href="mailto:harshpatilhp2004@gmail.com" class="timeline-row">
+              <span class="round-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <polyline points="3 7 12 13 21 7"/>
+                </svg>
+              </span>
+              <span class="row-label">harshpatilhp2004@gmail.com</span>
+            </a>
+            <a href="tel:+917498145900" class="timeline-row">
+              <span class="round-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </span>
+              <span class="row-label">+91 7498145900</span>
+            </a>
+            <a href="https://github.com/PatilHarsh2004" target="_blank" rel="noopener noreferrer" class="timeline-row">
+              <span class="round-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </span>
+              <span class="row-label">github.com/PatilHarsh2004</span>
+            </a>
+            <a href="https://www.linkedin.com/in/harsh-r-patil-a76345329" target="_blank" rel="noopener noreferrer" class="timeline-row">
+              <span class="round-icon font-in">in</span>
+              <span class="row-label">linkedin.com/in/harsh-r-patil-a76345329</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-photo">
+        <img src="assets/profile_transparent.png" alt="Harshvardhan Patil portrait">
+      </div>
+
+      <a href="#about" class="home-scroll" aria-label="Scroll down">
+        <span class="mouse-pill"><b class="scroll-dot"></b></span>
+        <span class="scroll-arrow">⌄</span>
+      </a>
+    </section>
+
+    <section id="about" class="section split">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="content reveal">
+        <p class="eyebrow">WHO IS BEHIND THE CODE?</p>
+        <h2>Curious mind.<br><span>Practical builder.</span></h2>
+        <p>I'm Harshvardhan Patil, an MCA student with a foundation in Core Java, Object-Oriented Programming, exception handling, multithreading, SQL and web development.</p>
+        <p>I enjoy turning academic ideas into working software and continuously improving my development skills while exploring emerging areas such as Artificial Intelligence.</p>
+        <div class="about-grid">
+          <div><span>LOCATION</span><strong>Maharashtra, India</strong></div>
+          <div><span>EDUCATION</span><strong>MCA — Pursuing</strong></div>
+          <div><span>FOCUS</span><strong>Java + Web Development</strong></div>
+          <div><span>LANGUAGES</span><strong>English • Hindi • Marathi</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-label">02 / SKILLS</div>
+      <div class="content">
+        <p class="eyebrow">INTERACTIVE SKILL MATRIX</p>
+        <h2>Click a skill.<br><span>See the module.</span></h2>
+        <div class="skill-layout">
+          <div class="skill-cloud">
+            <button class="skill active" data-skill="java">JAVA</button>
+            <button class="skill" data-skill="web">HTML / CSS</button>
+            <button class="skill" data-skill="js">JAVASCRIPT</button>
+            <button class="skill" data-skill="sql">MYSQL / SQL</button>
+            <button class="skill" data-skill="oop">OOP</button>
+            <button class="skill" data-skill="tools">TOOLS</button>
+          </div>
+          <div id="skillPanel" class="module-panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-label">03 / PROJECTS</div>
+      <div class="content">
+        <p class="eyebrow">SYSTEMS I'VE BUILT</p>
+        <h2>Projects that<br><span>solve problems.</span></h2>
+
+        <div class="project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-main">
+            <p class="project-tag">JAVA BACKEND • MAR 2026 — PRESENT</p>
+            <h3>ONLINE VOTING SYSTEM</h3>
+            <p>A secure web-based voting system for candidate registration, voter registration and election management through an admin panel.</p>
+            <div class="tech-list"><span>HTML</span><span>CSS</span><span>JAVA</span><span>MYSQL</span></div>
+            <button class="demo-btn" data-demo="voting">OPEN SYSTEM SIMULATION →</button>
+          </div>
+          <div class="project-visual voting-visual">
+            <div class="flow">
+              <div>VOTER</div><i>→</i><div>LOGIN</div><i>→</i><div>VOTE</div><i>→</i><div>DB</div>
+            </div>
+            <div class="admin-chip">ADMIN CONTROL<br><b>START • STOP • RESET</b></div>
+          </div>
+        </div>
+
+        <div class="project-card reverse reveal">
+          <div class="project-number">02</div>
+          <div class="project-main">
+            <p class="project-tag">WEB APPLICATION • JAN — MAR 2025</p>
+            <h3>ONLINE FOOD RESTAURANT ORDERING</h3>
+            <p>A web application where users can browse menus, register, place orders and manage restaurant ordering operations.</p>
+            <div class="tech-list"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>PHP</span><span>MYSQL</span><span>XAMPP</span></div>
+            <button class="demo-btn" data-demo="food">OPEN ORDER SIMULATION →</button>
+          </div>
+          <div class="project-visual food-visual">
+            <div class="food-screen">
+              <div class="food-header">🍜 DIGITAL MENU</div>
+              <div class="food-item"><span>🍕 Pizza</span><button data-add="Pizza">+</button></div>
+              <div class="food-item"><span>🍔 Burger</span><button data-add="Burger">+</button></div>
+              <div class="food-item"><span>🍝 Pasta</span><button data-add="Pasta">+</button></div>
+              <div id="cartCount">CART: 0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section split">
+      <div class="section-label">04 / JOURNEY</div>
+      <div class="content">
+        <p class="eyebrow">DEVELOPER TIMELINE</p>
+        <h2>From learning<br><span>to building.</span></h2>
+        <div class="timeline">
+          <article><time>2019 — 2020</time><h3>SSC</h3><p>Wategaon Highschool • 85.20%</p></article>
+          <article><time>2021 — 2022</time><h3>HSC — SCIENCE</h3><p>S. D. Patil Jr. College • 66%</p></article>
+          <article><time>2022 — 2025</time><h3>BCA</h3><p>S.G.M. College, Karad • 7.89 CGPA</p></article>
+          <article><time>2025 — PRESENT</time><h3>MCA</h3><p>K.K. Wagh Institute of Engineering Education & Research • 7.59 SGPA</p></article>
+          <article><time>2025</time><h3>FULL STACK JAVA DEVELOPMENT</h3><p>Capgemini & Symbiosis Institute</p></article>
+          <article><time>2025</time><h3>ASCEND — EVENT LEAD</h3><p>Planned technical events, coordinated teams and helped ensure smooth execution.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="terminal-section section">
+      <div class="terminal reveal">
+        <div class="terminal-bar"><span></span><span></span><span></span><b>harsh@portfolio:~</b></div>
+        <div id="terminalOutput">
+          <p>Welcome to <strong>HARSH.OS</strong></p>
+          <p>Type <em>help</em> to see available commands.</p>
+        </div>
+        <div class="terminal-input"><span>&gt;</span><input id="terminalInput" autocomplete="off" placeholder="try: help"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-label">05 / CONTACT</div>
+      <div class="content reveal">
+        <p class="eyebrow">END OF TRANSMISSION</p>
+        <h2>Have an idea?<br><span>Let's build it.</span></h2>
+        <p>I'm always interested in learning, building and connecting with people working on interesting technology.</p>
+        <div class="contact-grid">
+          <a href="mailto:harshpatilhp2004@gmail.com" class="contact-card"><small>EMAIL</small><strong>harshpatilhp2004@gmail.com ↗</strong></a>
+          <a href="tel:+917498145900" class="contact-card"><small>MOBILE</small><strong>+91 7498145900 ↗</strong></a>
+          <a href="https://github.com/PatilHarsh2004" target="_blank" rel="noopener noreferrer" class="contact-card"><small>GITHUB</small><strong>PatilHarsh2004 ↗</strong></a>
+          <a href="https://www.linkedin.com/in/harsh-r-patil-a76345329" target="_blank" rel="noopener noreferrer" class="contact-card"><small>LINKEDIN</small><strong>Connect with me ↗</strong></a>
+          <div class="contact-card"><small>BASED IN</small><strong>Maharashtra, India</strong></div>
+        </div>
+        <div class="resume-actions">
+          <button id="resumeBtn" class="neon-btn">VIEW RESUME</button>
+          <a href="resume.pdf" download class="ghost-btn">DOWNLOAD RESUME ↓</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>HARSHVARDHAN PATIL <span>•</span> BUILT WITH HTML / CSS / JAVASCRIPT <span>•</span> 2026</footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
