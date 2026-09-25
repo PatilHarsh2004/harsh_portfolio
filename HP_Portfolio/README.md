@@ -1,13 +1,1 @@
-# Harsh Patil — Final Portfolio
-
-This version rebuilds the Home page from HTML/CSS rather than using the supplied screenshot as a background.
-
-### Home page updates
-- Recreated the supplied reference layout with a dark black background and subtle warm portrait glow.
-- Reduced the main name typography to match the reference proportions.
-- Rebuilt the script-style `Harsh Patil </>` logo in both the entry screen and header.
-- Rebuilt the email, mobile, GitHub and LinkedIn contact rail with circular icons and the vertical connector line.
-- Uses the transparent portrait asset instead of a pasted screenshot.
-- Added working dark/light mode with localStorage persistence.
-
-The About, Skills, Projects, Journey, terminal and Contact sections remain part of the same portfolio project.
+# Harshvardhan Patil — Interactive Portfolio\n\n## Files\n- `index.html` — portfolio structure\n- `style.css` — styling and responsive layout\n- `script.js` — home interactions, skill matrix, terminal and navigation behavior\n- `resume.pdf` — resume opened by the View Resume link\n- `assets/profile_transparent.png` — hero portrait\n\n## Run locally\nKeep the folder structure intact and open `index.html` in a browser. For best results, run it through a local web server such as VS Code Live Server.\nThe resume links point to `./resume.pdf`. The home hero uses a black background, an animated role label, and subtle pointer-responsive portrait movement. Project cards list technologies, key features and skills; the simulation widgets have been removed.\n

@@ -3,10 +3,38 @@ const skills={java:{title:'JAVA CORE',text:'My primary programming focus for bac
 function showSkill(k){let d=skills[k];$('#skillPanel').innerHTML=`<h3>${d.title}</h3><p>${d.text}</p><ul>${d.items.map(x=>`<li>${x}</li>`).join('')}</ul>`;$$('.skill').forEach(b=>b.classList.toggle('active',b.dataset.skill===k))}$$('.skill').forEach(b=>b.onclick=()=>showSkill(b.dataset.skill));showSkill('java');
 let p=0,boot=setInterval(()=>{p+=4;$('#bootProgress').style.width=p+'%';if(p>=100){clearInterval(boot);$('#bootText').textContent='SYSTEM READY.';$('#enterBtn').classList.remove('hidden')}},60);$('#enterBtn').onclick=()=>{$('#bootScreen').style.opacity=0;$('#bootScreen').style.transition='.5s';setTimeout(()=>$('#bootScreen').remove(),500)};
 $('#menuBtn').onclick=()=>$('#nav').classList.toggle('open');$$('nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+
+// Home-page interaction: rotating role label and subtle portrait movement.
+const heroRole = $('#heroRole');
+if (heroRole) {
+  const roles = ['JAVA DEVELOPER', 'MCA STUDENT', 'WEB DEVELOPER', 'PROBLEM SOLVER'];
+  let roleIndex = 0;
+  window.setInterval(() => {
+    heroRole.classList.add('changing');
+    window.setTimeout(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      heroRole.textContent = roles[roleIndex];
+      heroRole.classList.remove('changing');
+    }, 220);
+  }, 2600);
+}
+const hero = $('#home');
+const portrait = $('.home-photo img');
+if (hero && portrait && window.matchMedia('(pointer: fine)').matches) {
+  hero.addEventListener('pointermove', event => {
+    const bounds = hero.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    portrait.style.transform = `translate(${x * 9}px, ${y * 6}px)`;
+  });
+  hero.addEventListener('pointerleave', () => { portrait.style.transform = ''; });
+}
 const obs=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});$$('.reveal').forEach(x=>obs.observe(x));
 let cart=0;$$('[data-add]').forEach(b=>b.onclick=()=>{cart++;$('#cartCount').textContent='CART: '+cart;b.textContent='✓';setTimeout(()=>b.textContent='+',600)});
-const modal=$('#modal'),mc=$('#modalContent');$$('.demo-btn').forEach(b=>b.onclick=()=>{if(b.dataset.demo==='voting'){mc.innerHTML=`<p class="eyebrow">LIVE SIMULATION / VOTING SYSTEM</p><h2>Election Control</h2><p>Interactive front-end simulation of the project workflow.</p><div class="sim"><button data-action="register">Register Voter</button><button data-action="candidate">Register Candidate</button><button data-action="start">Start Election</button><button data-action="vote">Cast Vote</button><button data-action="stop">Stop Election</button><div id="simResult" class="sim-result">STATUS: WAITING FOR ACTION</div></div>`;$$('.sim button').forEach(x=>x.onclick=()=>$('#simResult').textContent={register:'VOTER REGISTRATION: RECORD CREATED',candidate:'CANDIDATE NOMINATION: SUBMITTED',start:'ELECTION STATUS: ACTIVE',vote:'VOTE: ACCEPTED → DATABASE',stop:'ELECTION STATUS: STOPPED'}[x.dataset.action])}else{mc.innerHTML=`<p class="eyebrow">LIVE SIMULATION / FOOD ORDERING</p><h2>Order Flow</h2><p>Menu → cart → order workflow.</p><div class="sim"><button data-food="Pizza">Add Pizza</button><button data-food="Burger">Add Burger</button><button data-food="Pasta">Add Pasta</button><button id="checkout">Place Order</button><div id="simResult" class="sim-result">CART: EMPTY</div></div>`;let items=[];$$('[data-food]').forEach(x=>x.onclick=()=>{items.push(x.dataset.food);$('#simResult').textContent='CART: '+items.join(', ')});$('#checkout').onclick=()=>$('#simResult').textContent=items.length?`ORDER PLACED: ${items.length} ITEM(S) → RESTAURANT`:'ADD AN ITEM FIRST'}modal.classList.remove('hidden')});$('#closeModal').onclick=()=>modal.classList.add('hidden');modal.onclick=e=>e.target===modal&&(modal.classList.add('hidden'));
-$('#resumeBtn').onclick=()=>{mc.innerHTML=`<p class="eyebrow">RESUME VIEWER</p><h2>Harshvardhan Patil</h2><p>Open the included resume PDF.</p><div class="sim"><a class="neon-btn" href="resume.pdf" target="_blank">OPEN PDF ↗</a></div>`;modal.classList.remove('hidden')};
+const modal=$('#modal'),mc=$('#modalContent');
+if ($('#closeModal')) $('#closeModal').onclick=()=>modal.classList.add('hidden');
+if (modal) modal.onclick=e=>{if(e.target===modal) modal.classList.add('hidden')};
+
 const cmds={help:'Commands: about, skills, projects, education, contact, clear',about:'MCA student • Java-focused developer • practical builder',skills:'Java | OOP | SQL/MySQL | HTML | CSS | JavaScript | Eclipse | VS Code | XAMPP',projects:'01 Online Voting System | 02 Online Food Restaurant Ordering System',education:'MCA — K.K. Wagh Institute • BCA — S.G.M. College, Karad',contact:'Email: harshpatilhp2004@gmail.com | Mobile: +91 7498145900 | GitHub: github.com/PatilHarsh2004 | LinkedIn: /harsh-r-patil-a76345329'};$('#terminalInput').onkeydown=e=>{if(e.key!=='Enter')return;let q=e.target.value.trim().toLowerCase(),out=$('#terminalOutput');if(q==='clear'){out.innerHTML='';e.target.value='';return}out.innerHTML+=`<p><span style="color:var(--accent)">harsh@portfolio:~$</span> ${q}</p><p>${cmds[q]||`Command not found: ${q}. Type <em>help</em>.`}</p>`;e.target.value=''};
 
 

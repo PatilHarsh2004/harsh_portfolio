@@ -40,7 +40,7 @@
   <main>
     <section id="home" class="home-hero">
       <div class="home-copy">
-        <p class="home-kicker">MCA STUDENT <span>•</span> JAVA DEVELOPER <span>•</span> BUILDER</p>
+        <p class="home-kicker"><span class="status-dot" aria-hidden="true"></span> MCA STUDENT <span>•</span> <span id="heroRole" class="hero-role" aria-live="polite">JAVA DEVELOPER</span></p>
         <h1 class="main-title">
           <span class="first-name">HARSHVARDHAN</span>
           <span class="last-name">PATIL</span>
@@ -166,42 +166,33 @@
         <p class="eyebrow">SYSTEMS I'VE BUILT</p>
         <h2>Projects that<br><span>solve problems.</span></h2>
 
-        <div class="project-card reveal">
+        <article class="project-card reveal">
           <div class="project-number">01</div>
           <div class="project-main">
             <p class="project-tag">JAVA BACKEND • MAR 2026 — PRESENT</p>
             <h3>ONLINE VOTING SYSTEM</h3>
-            <p>A secure web-based voting system for candidate registration, voter registration and election management through an admin panel.</p>
-            <div class="tech-list"><span>HTML</span><span>CSS</span><span>JAVA</span><span>MYSQL</span></div>
-            <button class="demo-btn" data-demo="voting">OPEN SYSTEM SIMULATION →</button>
-          </div>
-          <div class="project-visual voting-visual">
-            <div class="flow">
-              <div>VOTER</div><i>→</i><div>LOGIN</div><i>→</i><div>VOTE</div><i>→</i><div>DB</div>
+            <p>A web-based voting system for candidate registration, voter registration and election management through an admin panel.</p>
+            <div class="project-details">
+              <div><h4>TECHNOLOGIES</h4><div class="tech-list"><span>JAVA</span><span>HTML</span><span>CSS</span><span>MYSQL</span></div></div>
+              <div><h4>KEY FEATURES</h4><ul class="project-points"><li>Voter and candidate registration</li><li>Admin election controls</li><li>Database-backed data handling</li></ul></div>
+              <div><h4>SKILLS APPLIED</h4><div class="tech-list"><span>OOP</span><span>JavaBeans</span><span>Database Connectivity</span></div></div>
             </div>
-            <div class="admin-chip">ADMIN CONTROL<br><b>START • STOP • RESET</b></div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card reverse reveal">
+        <article class="project-card reveal">
           <div class="project-number">02</div>
           <div class="project-main">
             <p class="project-tag">WEB APPLICATION • JAN — MAR 2025</p>
             <h3>ONLINE FOOD RESTAURANT ORDERING</h3>
             <p>A web application where users can browse menus, register, place orders and manage restaurant ordering operations.</p>
-            <div class="tech-list"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>PHP</span><span>MYSQL</span><span>XAMPP</span></div>
-            <button class="demo-btn" data-demo="food">OPEN ORDER SIMULATION →</button>
-          </div>
-          <div class="project-visual food-visual">
-            <div class="food-screen">
-              <div class="food-header">🍜 DIGITAL MENU</div>
-              <div class="food-item"><span>🍕 Pizza</span><button data-add="Pizza">+</button></div>
-              <div class="food-item"><span>🍔 Burger</span><button data-add="Burger">+</button></div>
-              <div class="food-item"><span>🍝 Pasta</span><button data-add="Pasta">+</button></div>
-              <div id="cartCount">CART: 0</div>
+            <div class="project-details">
+              <div><h4>TECHNOLOGIES</h4><div class="tech-list"><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>PHP</span><span>MYSQL</span><span>XAMPP</span></div></div>
+              <div><h4>KEY FEATURES</h4><ul class="project-points"><li>User registration and login</li><li>Interactive menu and order placement</li><li>PHP backend and database integration</li></ul></div>
+              <div><h4>SKILLS APPLIED</h4><div class="tech-list"><span>Frontend Development</span><span>PHP</span><span>MySQL</span><span>CRUD Basics</span></div></div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -246,8 +237,8 @@
           <div class="contact-card"><small>BASED IN</small><strong>Maharashtra, India</strong></div>
         </div>
         <div class="resume-actions">
-          <button id="resumeBtn" class="neon-btn">VIEW RESUME</button>
-          <a href="resume.pdf" download class="ghost-btn">DOWNLOAD RESUME ↓</a>
+          <a id="resumeBtn" class="neon-btn" href="./resume.pdf" target="_blank" rel="noopener noreferrer">VIEW RESUME ↗</a>
+          <a href="./resume.pdf" download="Harshvardhan_Patil_Resume.pdf" class="ghost-btn">DOWNLOAD RESUME ↓</a>
         </div>
       </div>
     </section>
